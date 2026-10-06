@@ -1,0 +1,11 @@
+.logo {
+  display: block;
+  flex-shrink: 0;
+
+  color: #333333;
+  text-decoration: none;
+
+  &__image {
+    display: block;
+  }
+}

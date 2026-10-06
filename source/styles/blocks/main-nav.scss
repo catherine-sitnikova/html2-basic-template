@@ -1,0 +1,136 @@
+.main-nav {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .main-nav {
+    &__list {
+      margin: 0;
+      padding: 0;
+
+      position: absolute;
+      top: 60px;
+      right: 0;
+      left: 0;
+
+      background-color: #ffffff;
+      list-style: none;
+    }
+
+    &__item {
+      position: relative;
+
+      margin: 0;
+      padding: 0;
+
+      border-top: 1px solid #f0ebff;
+
+      &:last-child {
+        border-bottom: 1px solid #f0ebff;
+      }
+
+      &--current::after {
+        display: none;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 44px;
+      padding: 0 20px;
+
+      color: #333333;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: #7859cf;
+      }
+
+      &:active {
+        background-color: #f0ebff;
+      }
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    display: block;
+    margin-left: auto;
+
+    &__list {
+      display: flex;
+      align-items: stretch;
+
+      margin: 0;
+      padding: 0;
+
+      list-style: none;
+    }
+
+    &__item {
+      position: relative;
+
+      margin: 0;
+      padding: 0;
+
+      &--current::after {
+        content: "";
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        height: 2px;
+        background-color: #7859cf;
+      }
+    }
+
+    &__link {
+      display: flex;
+      align-items: center;
+
+      min-height: 80px;
+      padding: 0 20px;
+
+      color: #333333;
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: uppercase;
+      text-decoration: none;
+
+      &:hover,
+      &:focus-visible {
+        color: #7859cf;
+      }
+
+      &:active {
+        background-color: #F0EBFF;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav {
+    margin-left: 80px;
+
+    &__list {
+      gap: 20px;
+    }
+
+    &__link {
+      padding: 0 20px;
+    }
+  }
+}

@@ -1,5 +1,42 @@
 .header {
-  padding: 10px 15px;
-  color: #ffffff;
-  background-color: #663399;
+  position: relative;
+
+  &__container {
+    width: 100%;
+    max-width: 1360px;
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+  }
+}
+
+.header--menu-open {
+  .main-nav {
+    display: block;
+  }
+
+  .user-nav__icon--menu {
+    mask-image: url("../../icons/icon-menu-close.svg");
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header {
+    &__container {
+      min-height: 80px;
+      padding: 0 40px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header {
+    &__container {
+      padding: 0 40px;
+    }
+  }
 }

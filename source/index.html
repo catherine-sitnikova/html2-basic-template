@@ -1,25 +1,74 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
-  <head>
-    <meta charset="UTF-8">
-    <title>Название проекта</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="#" rel="preload" type="font/woff2" as="font">
-    <link href="styles/styles.css" rel="stylesheet">
-    <script src="scripts/index.js" defer></script>
-  </head>
-  <body class="page__body">
-    <header class="header">Шапка
-      <div class="header__wrapper">
-        <div class="header__logo"></div>
-        <div class="header__account"></div>
-        <div class="header__basket"></div>
-        <div class="header__menu"></div>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Название проекта</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="./fonts/Montserrat-Regular.woff2" rel="preload" type="font/woff2" as="font" crossorigin="anonymous">
+  <link href="./fonts/Montserrat-Bold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="anonymous">
+  <link href="./fonts/Montserrat-SemiBold.woff2" rel="preload" type="font/woff2" as="font" crossorigin="anonymous">
+  <link href="styles/styles.css" rel="stylesheet">
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body class="page-body">
+  <div class="page-body__container">
+    <header class="header">
+      <div class="header__container">
+        <a class="header__logo logo" href="#" aria-label="Drink2Go — на главную">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="images/Logo-Drink2Go-desktop.svg" width="170" height="36"
+              type="image/svg+xml">
+            <source media="(min-width: 768px)" srcset="images/Logo-Drink2Go-tablet.svg" width="82" height="36"
+              type="image/svg+xml">
+            <img class="logo__image" src="images/Logo-Drink2Go-mobile.svg" width="32" height="36" alt="Drink2Go">
+          </picture>
+        </a>
+        <nav class="header__main-nav main-nav" aria-label="Основная навигация">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--current">
+              <a class="main-nav__link" href="#">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                Доставка
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="#">
+                О нас
+              </a>
+            </li>
+          </ul>
+        </nav>
+    
+        <div class="header__user-nav user-nav">
+          <a class="user-nav__link" href="#">
+            <span class="user-nav__icon user-nav__icon--user" aria-hidden="true"></span>
+            <span class="user-nav__text">Войти</span>
+          </a>
+          <a class="user-nav__link" href="#">
+            <span class="user-nav__icon user-nav__icon--basket" aria-hidden="true"></span>
+            <span class="user-nav__text">Корзина</span>
+          </a>
+          <button class="user-nav__menu" type="button" aria-label="Открыть меню" aria-expanded="false">
+            <span class="user-nav__icon user-nav__icon--menu" aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
     <main>
-      <h1>Страница для старта</h1>
-      <img src="./icons/stack.svg#htmlacademy-logo" width="300" height="150" alt="Логотип HTML Academy">
+      <h1 class="visually-hidden">Drink2Go</h1>
     </main>
-  </body>
+  </div>
+</body>
+
 </html>

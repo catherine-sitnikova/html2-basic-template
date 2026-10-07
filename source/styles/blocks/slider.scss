@@ -202,25 +202,25 @@
     &__info {
       order: 1;
     }
-  }
 
-  &__button {
-    width: 80px;
+    &__button {
+      width: 80px;
+    }
   }
 }
 
-  @media (min-width: $desktop-width) {
-    .slider {
-      &__content {
-        flex-direction: row;
-      }
+@media (min-width: $desktop-width) {
+  .slider {
+    &__content {
+      flex-direction: row;
+    }
 
-      &__image {
-        order: 1;
-      }
+    &__image {
+      order: 1;
+    }
 
-      &__info {
-        order: 2;
-      }
+    &__info {
+      order: 2;
     }
   }
+}

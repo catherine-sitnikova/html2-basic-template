@@ -131,11 +131,28 @@
     background-color: transparent;
     transform: translateY(-50%);
 
+    &:disabled {
+      color: #BDBDBD
+    }
+
     &--prev {
       left: 0;
 
       span {
         transform: rotate(-135deg);
+      }
+
+      &:hover,
+      &:focus-visible {
+        background: linear-gradient(to right,
+            #FFFFFF 0%,
+            transparent 100%);
+      }
+
+      &:active {
+        background: linear-gradient(to right,
+            #7859cf40 0%,
+            transparent 100%);
       }
     }
 
@@ -145,6 +162,20 @@
       span {
         transform: rotate(45deg);
       }
+
+      &:hover,
+      &:focus-visible {
+        background: linear-gradient(to left,
+            #FFFFFF 0%,
+            transparent 100%);
+      }
+
+      &:active {
+        background: linear-gradient(to left,
+            #7859cf40 0%,
+            transparent 100%);
+      }
+
     }
 
     span {
@@ -179,12 +210,16 @@
       opacity: 0.25;
     }
 
-    &--active {
+    &:active {
       background-color: #7859CF;
     }
 
     &:disabled {
       background-color: #E2E2E2;
+    }
+
+    &--active {
+      background-color: #7859CF;
     }
   }
 }
@@ -205,6 +240,7 @@
 
     &__button {
       width: 80px;
+      height: 714px;
     }
   }
 }

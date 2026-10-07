@@ -1,6 +1,8 @@
 .slider {
   position: relative;
   overflow: hidden;
+  background-color: #f3ebe2;
+
 
   &__container {
     position: relative;
@@ -107,3 +109,34 @@
   }
 }
 
+@media (min-width: $tablet-width) {
+  .slider {
+    &__content {
+      flex-direction: column;
+    }
+
+    &__image {
+      order: 2;
+    }
+
+    &__info {
+      order: 1;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slider {
+    &__content {
+      flex-direction: row;
+    }
+
+    &__image {
+      order: 1;
+    }
+
+    &__info {
+      order: 2;
+    }
+  }
+}

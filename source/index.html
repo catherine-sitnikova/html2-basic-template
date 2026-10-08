@@ -285,6 +285,600 @@
           </ul>
         </div>
       </section>
+
+      <section class="catalog">
+        <div class="catalog__container">
+
+          <div class="catalog__header">
+            <p class="catalog__badge">Каталог</p>
+
+            <h1 class="catalog__title">Каталог кофейных напитков</h1>
+          </div>
+
+          <div class="catalog__layout">
+
+            <aside class="catalog__filters">
+              <form class="catalog-form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
+
+                <fieldset class="catalog-form__group">
+                  <legend class="catalog-form__title">Стоимость, ₽</legend>
+
+                  <div class="catalog-form__price">
+                    <label class="catalog-form__price-label">
+                      <span class="visually-hidden">Минимальная цена</span>
+                      <input class="catalog-form__price-input" type="number" name="price-min" value="0" min="0"
+                        max="1000">
+                    </label>
+
+                    <span class="catalog-form__price-separator">—</span>
+
+                    <label class="catalog-form__price-label">
+                      <span class="visually-hidden">Максимальная цена</span>
+                      <input class="catalog-form__price-input" type="number" name="price-max" value="900" min="0"
+                        max="1000">
+                    </label>
+                  </div>
+
+                  <div class="catalog-form__range" id="price-range"></div>
+                </fieldset>
+
+                <fieldset class="catalog-form__group">
+                  <legend class="catalog-form__title">Наличие кофеина</legend>
+
+                  <ul class="catalog-form__list">
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="all" checked>
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Неважно</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="with">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">С кофеином</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="without">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Без кофеина</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <fieldset class="catalog-form__group">
+                  <legend class="catalog-form__title">Страна происхождения</legend>
+
+                  <ul class="catalog-form__list">
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="brazil">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Бразилия</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="ethiopia">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Эфиопия</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="colombia">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Колумбия</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="costa-rica">
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Коста-Рика</span>
+                      </label>
+                    </li>
+                  </ul>
+                </fieldset>
+
+                <div class="catalog-form__buttons">
+                  <button class="catalog-form__submit" type="submit">
+                    Применить
+                  </button>
+
+                  <button class="catalog-form__reset" type="reset">
+                    Сбросить
+                  </button>
+                </div>
+
+              </form>
+            </aside>
+
+            <div class="catalog__products">
+
+              <div class="catalog__sort">
+                <label class="catalog__sort-label" for="catalog-sort">
+                  Сортировка:
+                </label>
+
+                <select class="catalog__sort-select" id="catalog-sort" name="sort" form="catalog-form">
+                  <option value="default">по умолчанию</option>
+                  <option value="price-asc">сначала дешёвые</option>
+                  <option value="price-desc">сначала дорогие</option>
+                </select>
+              </div>
+
+              <ul class="catalog__list">
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp" srcset="
+                      images/catalog/coffee-can-1@1x.webp 1x,
+                      images/catalog/coffee-can-1@2x.webp 2x
+                    ">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png" srcset="
+                      images/catalog/coffee-can-1@1x.png 1x,
+                      images/catalog/coffee-can-1@2x.png 2x
+                    ">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp" srcset="
+                      images/catalog/coffee-can-1@1x.webp 1x,
+                      images/catalog/coffee-can-1@2x.webp 2x
+                    ">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png" srcset="
+                      images/catalog/coffee-can-1@1x.png 1x,
+                      images/catalog/coffee-can-1@2x.png 2x
+                    ">
+                        <source width="130" height="188" type="image/webp" srcset="
+                      images/catalog/coffee-can-1@1x.webp 1x,
+                      images/catalog/coffee-can-1@2x.webp 2x
+                    ">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-1@1x.png" srcset="images/catalog/coffee-can-1@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+
+                      <h3 class="product-card__title">
+                        Декаф Флэт Уайт
+                      </h3>
+                    </a>
+
+                    <p class="product-card__description">
+                      Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-2@1x.png 1x, images/catalog/coffee-can-2@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-2@1x.png 1x, images/catalog/coffee-can-2@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-2@1x.png" srcset="images/catalog/coffee-can-2@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-3@1x.png 1x, images/catalog/coffee-can-3@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-3@1x.png 1x, images/catalog/coffee-can-3@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-3@1x.png" srcset="images/catalog/coffee-can-3@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-4@1x.png 1x, images/catalog/coffee-can-4@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-4@1x.png 1x, images/catalog/coffee-can-4@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-4@1x.png" srcset="images/catalog/coffee-can-4@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-5@1x.png 1x, images/catalog/coffee-can-5@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-5@1x.png 1x, images/catalog/coffee-can-5@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-5@1x.png" srcset="images/catalog/coffee-can-5@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-6@1x.png 1x, images/catalog/coffee-can-6@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-6@1x.png 1x, images/catalog/coffee-can-6@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-6@1x.png" srcset="images/catalog/coffee-can-6@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-7@1x.png 1x, images/catalog/coffee-can-7@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-7@1x.png 1x, images/catalog/coffee-can-7@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-7@1x.png" srcset="images/catalog/coffee-can-7@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-8@1x.webp 1x, images/catalog/coffee-can-8@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-8@1x.png 1x, images/catalog/coffee-can-8@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-8@1x.webp 1x, images/catalog/coffee-can-8@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-8@1x.png 1x, images/catalog/coffee-can-8@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-8@1x.webp 1x, images/catalog/coffee-can-8@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-8@1x.png" srcset="images/catalog/coffee-can-8@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-9@1x.webp 1x, images/catalog/coffee-can-9@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-9@1x.png 1x, images/catalog/coffee-can-9@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-9@1x.webp 1x, images/catalog/coffee-can-9@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-9@1x.png 1x, images/catalog/coffee-can-9@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-9@1x.webp 1x, images/catalog/coffee-can-9@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-9@1x.png" srcset="images/catalog/coffee-can-9@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-1@1x.webp 1x, images/catalog/coffee-can-1@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-1@1x.png 1x, images/catalog/coffee-can-1@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-1@1x.webp 1x, images/catalog/coffee-can-1@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-1@1x.png 1x, images/catalog/coffee-can-1@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-1@1x.webp 1x, images/catalog/coffee-can-1@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-1@1x.png" srcset="images/catalog/coffee-can-1@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-2@1x.png 1x, images/catalog/coffee-can-2@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-2@1x.png 1x, images/catalog/coffee-can-2@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-2@1x.webp 1x, images/catalog/coffee-can-2@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-2@1x.png" srcset="images/catalog/coffee-can-2@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-3@1x.png 1x, images/catalog/coffee-can-3@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-3@1x.png 1x, images/catalog/coffee-can-3@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-3@1x.webp 1x, images/catalog/coffee-can-3@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-3@1x.png" srcset="images/catalog/coffee-can-3@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-4@1x.png 1x, images/catalog/coffee-can-4@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-4@1x.png 1x, images/catalog/coffee-can-4@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-4@1x.webp 1x, images/catalog/coffee-can-4@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-4@1x.png" srcset="images/catalog/coffee-can-4@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-5@1x.png 1x, images/catalog/coffee-can-5@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-5@1x.png 1x, images/catalog/coffee-can-5@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-5@1x.webp 1x, images/catalog/coffee-can-5@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-5@1x.png" srcset="images/catalog/coffee-can-5@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-6@1x.png 1x, images/catalog/coffee-can-6@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-6@1x.png 1x, images/catalog/coffee-can-6@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-6@1x.webp 1x, images/catalog/coffee-can-6@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-6@1x.png" srcset="images/catalog/coffee-can-6@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+                <li class="catalog__item">
+                  <article class="product-card">
+                    <a class="product-card__link" href="#">
+                      <picture>
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <source media="(min-width: 1440px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-7@1x.png 1x, images/catalog/coffee-can-7@2x.png 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <source media="(min-width: 768px)" width="130" height="188" type="image/png"
+                          srcset="images/catalog/coffee-can-7@1x.png 1x, images/catalog/coffee-can-7@2x.png 2x">
+                        <source width="130" height="188" type="image/webp"
+                          srcset="images/catalog/coffee-can-7@1x.webp 1x, images/catalog/coffee-can-7@2x.webp 2x">
+                        <img class="product-card__image" width="130" height="188"
+                          src="images/catalog/coffee-can-7@1x.png" srcset="images/catalog/coffee-can-7@2x.png 2x"
+                          alt="Декаф Флэт Уайт">
+                      </picture>
+                      <h3 class="product-card__title">Декаф Флэт Уайт</h3>
+                    </a>
+                    <p class="product-card__description">Кофе без кофеина из Эфиопии с натуральным фермерским молоком
+                    </p>
+                    <p class="product-card__price">225 ₽</p>
+                  </article>
+                </li>
+
+              </ul>
+
+              <div class="catalog__pagination" aria-label="Пагинация">
+                <a class="catalog__pagination-link catalog__pagination-link--prev" href="#">
+                  <span class="visually-hidden">Предыдущая страница</span>
+                </a>
+
+                <a class="catalog__pagination-link catalog__pagination-link--current" href="#">
+                  1
+                </a>
+
+                <a class="catalog__pagination-link" href="#">
+                  2
+                </a>
+
+                <a class="catalog__pagination-link" href="#">
+                  3
+                </a>
+
+                <a class="catalog__pagination-link catalog__pagination-link--next" href="#">
+                  <span class="visually-hidden">Следующая страница</span>
+                </a>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </div>
 </body>

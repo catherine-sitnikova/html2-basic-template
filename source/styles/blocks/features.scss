@@ -1,0 +1,161 @@
+.features {
+  padding: 50px 20px 60px;
+
+  &__container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  &__badge {
+    margin: 0 0 4px;
+    color: #7859cf;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2%;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin: 0 0 36px;
+    color: #333333;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 32px 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 50px;
+    height: 56px;
+    margin-bottom: 10px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    &--speed {
+      background-image: url("../../icons/features/features-speed.svg");
+    }
+
+    &--fit {
+      background-image: url("../../icons/features/features-fit.svg");
+    }
+
+    &--energy {
+      background-image: url("../../icons/features/features-energy.svg");
+    }
+
+    &--eco {
+      background-image: url("../../icons/features/features-eco.svg");
+    }
+  }
+
+  &__item-title {
+    margin: 0 0 4px;
+    color: #333333;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 32px;
+  }
+
+  &__description {
+    max-width: 280px;
+    margin: 0;
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding: 60px 30px 100px;
+
+    &__badge {
+      margin-bottom: 4px;
+    }
+
+    &__title {
+      margin-bottom: 60px;
+      font-size: 42px;
+      line-height: 64px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 30px;
+      row-gap: 20px;
+    }
+
+    &__item {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+      min-width: 0;
+      text-align: start;
+    }
+
+    &__icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 12px;
+    }
+
+    &__item-title {
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 36px;
+    }
+
+    &__description {
+      max-width: 267px;
+      font-size: 16px;
+      line-height: 24px;
+
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .features {
+    padding: 60px 30px 100px;
+
+    &__title {
+      margin-bottom: 50px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    &__list {
+      grid-template-columns: repeat(4, 1fr);
+      column-gap: 30px;
+      row-gap: 20px;
+    }
+
+    &__description {
+      max-width: 220px;
+    }
+  }
+}

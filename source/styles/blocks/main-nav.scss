@@ -46,6 +46,7 @@
       font-size: 12px;
       font-weight: 500;
       line-height: 16px;
+      letter-spacing: 2%;
       text-transform: uppercase;
       text-decoration: none;
 
@@ -123,7 +124,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    margin-left: 80px;
+    margin-left: 162px;
 
     &__list {
       gap: 20px;

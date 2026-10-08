@@ -1,11 +1,32 @@
 .logo {
   display: block;
   flex-shrink: 0;
+  gap: 20px;
 
   color: #333333;
   text-decoration: none;
 
   &__image {
     display: block;
+  }
+
+  &__text {
+    display: none;
+    margin: 0;
+    width: 126px;
+
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .logo {
+    display: flex;
+    flex-direction: row;
+
+    &__text {
+      display: block;
+    }
   }
 }

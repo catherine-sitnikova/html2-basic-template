@@ -6,7 +6,7 @@
     max-width: 1360px;
     min-width: 320px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 0 0 20px;
 
     display: flex;
     align-items: center;
@@ -28,7 +28,7 @@
   .header {
     &__container {
       min-height: 80px;
-      padding: 0 40px;
+      padding: 0 20px;
     }
   }
 }
@@ -36,7 +36,7 @@
 @media (min-width: $desktop-width) {
   .header {
     &__container {
-      padding: 0 40px;
+      padding: 0;
     }
   }
 }

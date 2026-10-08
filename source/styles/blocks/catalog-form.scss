@@ -1,0 +1,163 @@
+.catalog-form {
+  width: 100%;
+
+  &__group {
+    margin: 0 0 32px;
+    padding: 0;
+    border: 0;
+  }
+
+  &__title {
+    margin-bottom: 16px;
+    padding: 0;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+  }
+
+  &__price-label {
+    flex: 1;
+  }
+
+  &__price-input {
+    width: 100%;
+    height: 40px;
+    padding: 0 12px;
+    border: 2px solid #bdbdbd;
+    border-radius: 4px;
+    color: #333333;
+    font: inherit;
+    font-size: 14px;
+
+    &:focus {
+      border-color: #7859cf;
+      outline: none;
+    }
+  }
+
+  &__price-separator {
+    color: #333333;
+  }
+
+  &__range {
+    width: 100%;
+    height: 4px;
+    margin-top: 12px;
+    background-color: #e2e2e2;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 24px;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    white-space: nowrap;
+  }
+
+  &__control {
+    display: block;
+    flex-shrink: 0;
+    width: 24px;
+    height: 24px;
+    margin-right: 12px;
+    border: 2px solid #bdbdbd;
+    border-radius: 50%;
+  }
+
+  &__checkbox[type="checkbox"] + &__control {
+    border-radius: 4px;
+  }
+
+  &__checkbox:checked + &__control {
+    border-color: #7859cf;
+    background-color: #7859cf;
+  }
+
+  &__checkbox:focus-visible + &__control {
+    outline: 2px solid #7859cf;
+    outline-offset: 2px;
+  }
+
+  &__text {
+    color: #333333;
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__submit,
+  &__reset {
+    width: 100%;
+    min-height: 40px;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+  }
+
+  &__submit {
+    background-color: #7859cf;
+    color: #ffffff;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #6246a8;
+    }
+  }
+
+  &__reset {
+    background-color: #f0ebff;
+    color: #7859cf;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #e2d9ff;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+   .catalog-form {
+    &__buttons {
+      gap: 12px;
+    }
+  }
+}

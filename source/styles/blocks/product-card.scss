@@ -97,3 +97,29 @@
     display: inline;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .product-card {
+    padding: 20px;
+
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
+    &__description {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product-card {
+    padding: 30px;
+
+    &__image {
+      margin-bottom: 24px;
+    }
+  }
+}

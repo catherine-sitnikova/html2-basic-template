@@ -289,11 +289,8 @@
       <section class="catalog">
         <div class="catalog__container">
 
-          <div class="catalog__header">
-            <p class="catalog__badge">Каталог</p>
-
-            <h1 class="catalog__title">Каталог кофейных напитков</h1>
-          </div>
+          <p class="catalog__badge">Каталог</p>
+          <h1 class="catalog__title">Каталог кофейных напитков</h1>
 
           <div class="catalog__layout">
 
@@ -301,29 +298,35 @@
               <form class="catalog-form" id="catalog-form" action="https://echo.htmlacademy.ru" method="get">
 
                 <fieldset class="catalog-form__group">
-                  <legend class="catalog-form__title">Стоимость, ₽</legend>
+                  <legend class="catalog-form__title">Цена</legend>
+
+                  <div class="catalog-form__strip">
+                    <div class="catalog-form__range" id="price-range">
+                      <button class="catalog-form__button-range catalog-form__button-range--min" type="button">
+                      </button>
+                      <button class="catalog-form__button-range catalog-form__button-range--max" type="button">
+                      </button>
+                    </div>
+                  </div>
+
 
                   <div class="catalog-form__price">
                     <label class="catalog-form__price-label">
                       <span class="visually-hidden">Минимальная цена</span>
-                      <input class="catalog-form__price-input" type="number" name="price-min" value="0" min="0"
-                        max="1000">
+                      <input class="catalog-form__price-input" type="number" name="price-min" placeholder="0" min="0" max="1000">
                     </label>
 
-                    <span class="catalog-form__price-separator">—</span>
+                    <span class="catalog-form__price-separator"></span>
 
                     <label class="catalog-form__price-label">
                       <span class="visually-hidden">Максимальная цена</span>
-                      <input class="catalog-form__price-input" type="number" name="price-max" value="900" min="0"
-                        max="1000">
+                      <input class="catalog-form__price-input" type="number" name="price-max" value="900" placeholder="900" min="0" max="1000">
                     </label>
                   </div>
-
-                  <div class="catalog-form__range" id="price-range"></div>
                 </fieldset>
 
                 <fieldset class="catalog-form__group">
-                  <legend class="catalog-form__title">Наличие кофеина</legend>
+                  <legend class="catalog-form__title">Наличие молока</legend>
 
                   <ul class="catalog-form__list">
                     <li class="catalog-form__item">
@@ -338,15 +341,23 @@
                       <label class="catalog-form__label">
                         <input class="catalog-form__checkbox" type="radio" name="caffeine" value="with">
                         <span class="catalog-form__control"></span>
-                        <span class="catalog-form__text">С кофеином</span>
+                        <span class="catalog-form__text">Только животное</span>
                       </label>
                     </li>
 
                     <li class="catalog-form__item">
                       <label class="catalog-form__label">
-                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="without">
+                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="with">
                         <span class="catalog-form__control"></span>
-                        <span class="catalog-form__text">Без кофеина</span>
+                        <span class="catalog-form__text">Только растительное</span>
+                      </label>
+                    </li>
+
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="radio" name="caffeine" value="without" disabled>
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Без молока</span>
                       </label>
                     </li>
                   </ul>
@@ -385,6 +396,13 @@
                         <input class="catalog-form__checkbox" type="checkbox" name="country" value="costa-rica">
                         <span class="catalog-form__control"></span>
                         <span class="catalog-form__text">Коста-Рика</span>
+                      </label>
+                    </li>
+                    <li class="catalog-form__item">
+                      <label class="catalog-form__label">
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="costa-rica" disabled>
+                        <span class="catalog-form__control"></span>
+                        <span class="catalog-form__text">Перу</span>
                       </label>
                     </li>
                   </ul>

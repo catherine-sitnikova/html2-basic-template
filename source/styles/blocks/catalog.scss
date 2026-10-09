@@ -4,12 +4,8 @@
 
   &__container {
     width: 100%;
-    max-width: 1360px;
+    max-width: 320px;
     margin: 0 auto;
-  }
-
-  &__header {
-    margin-bottom: 32px;
   }
 
   &__badge {
@@ -18,13 +14,13 @@
     font-size: 12px;
     font-weight: 700;
     line-height: 16px;
-    letter-spacing: 0.02em;
+    letter-spacing: 4%;
     text-align: center;
     text-transform: uppercase;
   }
 
   &__title {
-    margin: 0;
+    margin: 0 0 20px;
     color: #333333;
     font-size: 24px;
     font-weight: 700;
@@ -33,11 +29,14 @@
   }
 
   &__layout {
-    display: grid;
-    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   &__filters {
+    display: flex;
+    justify-content: center;
     width: 100%;
   }
 
@@ -146,6 +145,11 @@
   .catalog {
     padding: 60px 30px 80px;
 
+    &__container {
+      max-width: 768px;
+    }
+
+
     &__header {
       margin-bottom: 40px;
     }
@@ -153,12 +157,6 @@
     &__title {
       font-size: 42px;
       line-height: 64px;
-    }
-
-    &__layout {
-      grid-template-columns: 220px minmax(0, 1fr);
-      gap: 30px;
-      align-items: start;
     }
 
     &__list {
@@ -175,24 +173,12 @@
       margin-top: 50px;
     }
   }
+}
 
-  .catalog-form {
-    &__buttons {
-      gap: 12px;
-    }
-  }
-
-  .product-card {
-    padding: 20px;
-
-    &__title {
-      font-size: 18px;
-      line-height: 24px;
-    }
-
-    &__description {
-      font-size: 14px;
-      line-height: 20px;
+@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
+  .catalog {
+    &__filters {
+      grid-column: 1 / -1;
     }
   }
 }
@@ -201,9 +187,19 @@
   .catalog {
     padding: 60px 40px 100px;
 
+    &__container {
+      max-width: 1440px;
+    }
+
+
+    &__title {
+      margin: 0 0 40px;
+    }
+
     &__layout {
-      grid-template-columns: 230px minmax(0, 1fr);
+      flex-direction: row;
       gap: 30px;
+      align-items: start;
     }
 
     &__list {
@@ -214,14 +210,6 @@
 
     &__sort {
       margin-bottom: 30px;
-    }
-  }
-
-  .product-card {
-    padding: 30px;
-
-    &__image {
-      margin-bottom: 24px;
     }
   }
 }

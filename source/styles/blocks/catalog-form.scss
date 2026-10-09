@@ -1,8 +1,10 @@
 .catalog-form {
   width: 100%;
+  max-width: 320px;
 
   &__group {
-    margin: 0 0 32px;
+    max-width: 280px;
+    margin: 0 0 30px;
     padding: 0;
     border: 0;
   }
@@ -12,15 +14,14 @@
     padding: 0;
     color: #333333;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 24px;
   }
 
   &__price {
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 20px;
+    gap: 18px;
   }
 
   &__price-label {
@@ -28,30 +29,116 @@
   }
 
   &__price-input {
-    width: 100%;
+    width: 118px;
     height: 40px;
     padding: 0 12px;
-    border: 2px solid #bdbdbd;
+    border: 2px solid #9070ec;
     border-radius: 4px;
+    background-color: #ffffff;
     color: #333333;
     font: inherit;
     font-size: 14px;
+    font-weight: 500;
+
+    &::placeholder {
+      color: #bdbdbd;
+      opacity: 1;
+    }
 
     &:focus {
-      border-color: #7859cf;
+      border-color: #593cac;
       outline: none;
+    }
+
+    &:disabled {
+      border-color: #e2e2e2;
+      background-color: #f8f8f8;
+      color: #bdbdbd;
+      cursor: not-allowed;
     }
   }
 
   &__price-separator {
-    color: #333333;
+    flex-shrink: 0;
+    width: 8px;
+    height: 2px;
+    background-color: #bdbdbd;
+  }
+
+  &__strip {
+    position: relative;
+    margin: 0 0 24px;
+    width: 100%;
+    height: 2px;
+    background-color: #E2E2E2;
   }
 
   &__range {
-    width: 100%;
+    width: 90%;
     height: 4px;
-    margin-top: 12px;
-    background-color: #e2e2e2;
+    background-color: #9070EC;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: #bdbdbd;
+      cursor: not-allowed;
+    }
+  }
+
+  &__button-range {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #9070ec;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    &--min {
+      left: 0;
+    }
+
+    &--max {
+      left: 90%;
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #7859CF40;
+
+      }
+    }
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: #7859CF;
+      }
+    }
+
+    &:disabled {
+      background-color: #BDBDBD;
+      cursor: not-allowed;
+
+      &::before {
+        background-color: #BDBDBD;
+      }
+    }
   }
 
   &__list {
@@ -86,7 +173,77 @@
     white-space: nowrap;
   }
 
+  // Переключатель только для checkbox
+  &__checkbox[type="checkbox"]+&__control {
+    position: relative;
+    display: block;
+    flex-shrink: 0;
+    width: 44px;
+    height: 24px;
+    margin-right: 12px;
+    border: 2px solid #BDBDBD;
+    border-radius: 12px;
+    background-color: #BDBDBD;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background-color: #FFFFFF;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+  }
+
+  // Включённый checkbox
+  &__checkbox[type="checkbox"]:checked+&__control {
+    border-color: #7859cf;
+    background-color: #7859cf;
+
+    &::before {
+      transform: translateX(20px);
+      background-color: #ffffff;
+    }
+  }
+
+  // Фокус только для checkbox
+  &__checkbox[type="checkbox"]:hover+&__control,
+  &__checkbox[type="checkbox"]:focus-visible+&__control {
+    background-color: #7859CF40;
+    border-color: #9070EC;
+    outline-offset: 3px;
+  }
+
+  // Отключённый checkbox
+  &__checkbox[type="checkbox"]:disabled+&__control {
+    border-color: #E2E2E2;
+    background-color: #E2E2E2;
+    cursor: not-allowed;
+
+    &::before {
+      background-color: #f8f8f8;
+    }
+  }
+
+  &__checkbox[type="checkbox"]:disabled~&__text {
+    color: #bdbdbd;
+    cursor: not-allowed;
+  }
+
+  &__checkbox[type="checkbox"]:checked:disabled+&__control {
+    &::before {
+      background-color: #E2E2E2;
+    }
+  }
+
+  // Исходные стили радиокнопок — без изменений
   &__control {
+    position: relative;
     display: block;
     flex-shrink: 0;
     width: 24px;
@@ -96,24 +253,35 @@
     border-radius: 50%;
   }
 
-  &__checkbox[type="checkbox"] + &__control {
-    border-radius: 4px;
-  }
-
-  &__checkbox:checked + &__control {
+  &__checkbox[type="radio"]:checked+&__control {
     border-color: #7859cf;
-    background-color: #7859cf;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      width: 16px;
+      height: 16px;
+      background-color: #7859cf;
+      border-radius: 50%;
+    }
   }
 
-  &__checkbox:focus-visible + &__control {
-    outline: 2px solid #7859cf;
-    outline-offset: 2px;
+  &__checkbox[type="radio"]:disabled+&__control {
+    border-color: #E2E2E2;
+  }
+
+  &__checkbox[type="radio"]:disabled~&__text {
+    color: #bdbdbd;
+    cursor: not-allowed;
   }
 
   &__text {
     color: #333333;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 
   &__buttons {
@@ -126,38 +294,103 @@
   &__reset {
     width: 100%;
     min-height: 40px;
-    padding: 10px 20px;
+    padding: 8px 20px;
     border-radius: 4px;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
-  }
-
-  &__submit {
-    background-color: #7859cf;
-    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
 
     &:hover,
     &:focus-visible {
-      background-color: #6246a8;
+      background-color: #9070EC;
+    }
+
+    &:active {
+      background-color: #593CAC;
+    }
+  }
+
+  &__submit {
+    background-color: #7859CF;
+    color: #ffffff;
+
+    &:disabled {
+      background-color: #BDBDBD;
     }
   }
 
   &__reset {
-    background-color: #f0ebff;
-    color: #7859cf;
+    background-color: #FFFFFF;
+    color: #7859CF;
 
     &:hover,
-    &:focus-visible {
-      background-color: #e2d9ff;
+    &:focus-visible,
+    &:active,
+    &:disabled {
+      color: #FFFFFF;
+    }
+
+    &:disabled {
+      background-color: #E2E2E2;
     }
   }
 }
 
 @media (min-width: $tablet-width) {
-   .catalog-form {
+  .catalog-form {
+    width: 100%;
+
     &__buttons {
       gap: 12px;
+    }
+
+    &__price-input {
+      width: 87px;
+    }
+
+    &__group {
+      max-width: 223px;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1px)) {
+  .catalog-form {
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    gap: 40px 30px;
+
+    &__group {
+      min-width: 0;
+      margin: 0;
+    }
+
+    &__buttons {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    &__submit,
+    &__reset {
+      width: 200px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-form {
+    max-width: 318px;
+
+    &__price-input {
+      width: 134px;
+    }
+
+    &__group {
+      max-width: 318px;
     }
   }
 }

@@ -1,6 +1,7 @@
 .product-card {
   display: flex;
   flex-direction: column;
+  width: 280px;
   height: 100%;
   padding: 40px 20px 20px;
   background-color: #ffffff;
@@ -118,7 +119,7 @@
 
 @media (min-width: $desktop-width) {
   .product-card {
-    width: 349px;
+    width: 317px;
     padding: 50px 30px 30px;
 
     &__image {

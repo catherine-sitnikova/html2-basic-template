@@ -313,14 +313,16 @@
                   <div class="catalog-form__price">
                     <label class="catalog-form__price-label">
                       <span class="visually-hidden">Минимальная цена</span>
-                      <input class="catalog-form__price-input" type="number" name="price-min" placeholder="0" min="0" max="1000">
+                      <input class="catalog-form__price-input" type="number" name="price-min" placeholder="0" min="0"
+                        max="1000">
                     </label>
 
                     <span class="catalog-form__price-separator"></span>
 
                     <label class="catalog-form__price-label">
                       <span class="visually-hidden">Максимальная цена</span>
-                      <input class="catalog-form__price-input" type="number" name="price-max" value="900" placeholder="900" min="0" max="1000">
+                      <input class="catalog-form__price-input" type="number" name="price-max" value="900"
+                        placeholder="900" min="0" max="1000">
                     </label>
                   </div>
                 </fieldset>
@@ -400,7 +402,8 @@
                     </li>
                     <li class="catalog-form__item">
                       <label class="catalog-form__label">
-                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="costa-rica" disabled>
+                        <input class="catalog-form__checkbox" type="checkbox" name="country" value="costa-rica"
+                          disabled>
                         <span class="catalog-form__control"></span>
                         <span class="catalog-form__text">Перу</span>
                       </label>
@@ -423,16 +426,21 @@
 
             <div class="catalog__products">
 
-              <div class="catalog__sort">
-                <label class="catalog__sort-label" for="catalog-sort">
-                  Сортировка:
-                </label>
-
-                <select class="catalog__sort-select" id="catalog-sort" name="sort" form="catalog-form">
-                  <option value="default">по умолчанию</option>
-                  <option value="price-asc">сначала дешёвые</option>
-                  <option value="price-desc">сначала дорогие</option>
-                </select>
+              <div class="catalog__sort catalog__sort--opened"> <span class="catalog__sort-label">Сортировка:</span>
+                <div class="catalog__sort-dropdown"> <button class="catalog__sort-select" type="button"
+                    aria-haspopup="listbox" aria-expanded="false"> <span class="catalog__sort-value">по умолчанию</span>
+                    <span class="catalog__sort-arrow" aria-hidden="true"></span> </button> <input type="hidden"
+                    name="sort" form="catalog-form" value="default">
+                  <ul class="catalog__sort-list" role="listbox">
+                    <li class="catalog__sort-item"> <button class="catalog__sort-option catalog__sort-option--selected"
+                        type="button" role="option" aria-selected="true" data-value="default"> по умолчанию </button>
+                    </li>
+                    <li class="catalog__sort-item"> <button class="catalog__sort-option" type="button" role="option"
+                        aria-selected="false" data-value="price-desc"> сначала дорогие </button> </li>
+                    <li class="catalog__sort-item"> <button class="catalog__sort-option" type="button" role="option"
+                        aria-selected="false" data-value="price-asc"> сначала дешёвые </button> </li>
+                  </ul>
+                </div>
               </div>
 
               <ul class="catalog__list">

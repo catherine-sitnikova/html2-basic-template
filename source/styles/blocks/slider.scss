@@ -20,11 +20,13 @@
 
   &__item {
     display: none;
+    justify-content: center;
     width: 100%;
     background-color: #f3ebe1;
 
     &--active {
-      display: block;
+      display: flex;
+      justify-content: center;
     }
 
     &--lavender {

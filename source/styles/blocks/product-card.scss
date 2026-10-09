@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px;
-  border-radius: 8px;
+  padding: 40px 20px 20px;
   background-color: #ffffff;
 
   &__link {
@@ -18,21 +17,21 @@
     display: block;
     width: 130px;
     height: 188px;
-    margin: 0 auto 20px;
+    margin: 0 auto 24px;
     object-fit: contain;
   }
 
   &__title {
     align-self: stretch;
-    margin: 0 0 8px;
+    margin: 0 0 4px;
     color: #333333;
     font-size: 18px;
     font-weight: 700;
-    line-height: 24px;
+    line-height: 32px;
   }
 
   &__description {
-    margin: 0 0 16px;
+    margin: 0 0 18px;
     color: #333333;
     font-size: 14px;
     line-height: 20px;
@@ -50,35 +49,38 @@
     margin: 0;
     color: #333333;
     font-size: 20px;
-    font-weight: 700;
-    line-height: 24px;
+    font-weight: 600;
+    line-height: 32px;
   }
 
   &__button {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    min-width: 110px;
-    min-height: 40px;
-    padding: 8px 16px;
+    gap: 6px;
+    width: 141px;
+    min-height: 36px;
+    padding: 8px 20px;
     border: 0;
     border-radius: 4px;
     background-color: #7859cf;
     color: #ffffff;
-    font: inherit;
-    font-size: 12px;
-    font-weight: 500;
-    line-height: 16px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
     cursor: pointer;
 
     &:hover,
     &:focus-visible {
-      background-color: #6246a8;
+      background-color: #9070EC;
     }
 
     &:active {
-      background-color: #4e3987;
+      background-color: #593CAC;
+    }
+
+    &:disabled {
+      background-color: #BDBDBD;
     }
   }
 
@@ -92,34 +94,35 @@
     background-position: center;
     background-size: contain;
   }
-
-  &__button-text {
-    display: inline;
-  }
 }
 
 @media (min-width: $tablet-width) {
   .product-card {
-    padding: 20px;
+    width: 349px;
+
+    &__image {
+      margin: 0 0 24px;
+    }
 
     &__title {
-      font-size: 18px;
-      line-height: 24px;
+      margin: 0 0 10px;
+      font-size: 24px;
+      line-height: 36px;
     }
 
     &__description {
-      font-size: 14px;
-      line-height: 20px;
+      margin: 0 0 20px;
     }
   }
 }
 
 @media (min-width: $desktop-width) {
   .product-card {
-    padding: 30px;
+    width: 349px;
+    padding: 50px 30px 30px;
 
     &__image {
-      margin-bottom: 24px;
+      margin-bottom: 30px;
     }
   }
 }

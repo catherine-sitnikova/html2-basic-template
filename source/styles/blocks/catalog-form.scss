@@ -66,59 +66,25 @@
   }
 
   &__strip {
+    position: relative;
+    margin: 0 0 24px;
     width: 100%;
-    margin: 10px 0 24px;
+    height: 2px;
+    background-color: #E2E2E2;
   }
 
   &__range {
-    width: 100%;
+    width: 90%;
     height: 4px;
-    border: none;
-    border-radius: 0;
-    background-color: #e2e2e2;
-    box-shadow: none;
+    background-color: #9070EC;
 
     &:focus {
       outline: none;
     }
 
-    .noUi-connect {
-      background-color: #9070ec;
-    }
-
-    .noUi-handle {
-      top: -10px;
-      right: -12px;
-      width: 24px;
-      height: 24px;
-      border: 2px solid #9070ec;
-      border-radius: 50%;
-      background-color: #fff;
-      box-shadow: none;
-      cursor: grab;
-
-      &::before,
-      &::after {
-        display: none;
-      }
-
-      &:focus-visible {
-        outline: 2px solid #593cac;
-        outline-offset: 2px;
-      }
-    }
-
-    .noUi-handle:active {
-      cursor: grabbing;
-    }
-
-    .noUi-handle.noUi-active {
-      border-color: #593cac;
-    }
-
-    .noUi-touch-area {
-      width: 100%;
-      height: 100%;
+    &:disabled {
+      background-color: #bdbdbd;
+      cursor: not-allowed;
     }
   }
 
@@ -207,7 +173,6 @@
     white-space: nowrap;
   }
 
-  // Переключатель только для checkbox
   &__checkbox[type="checkbox"]+&__control {
     position: relative;
     display: block;
@@ -234,7 +199,6 @@
     }
   }
 
-  // Включённый checkbox
   &__checkbox[type="checkbox"]:checked+&__control {
     border-color: #7859cf;
     background-color: #7859cf;
@@ -245,7 +209,6 @@
     }
   }
 
-  // Фокус только для checkbox
   &__checkbox[type="checkbox"]:hover+&__control,
   &__checkbox[type="checkbox"]:focus-visible+&__control {
     background-color: #7859CF40;
@@ -253,7 +216,6 @@
     outline-offset: 3px;
   }
 
-  // Отключённый checkbox
   &__checkbox[type="checkbox"]:disabled+&__control {
     border-color: #E2E2E2;
     background-color: #E2E2E2;
@@ -275,7 +237,6 @@
     }
   }
 
-  // Исходные стили радиокнопок — без изменений
   &__control {
     position: relative;
     display: block;

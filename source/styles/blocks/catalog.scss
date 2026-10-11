@@ -1,5 +1,5 @@
 .catalog {
-  padding: 40px 20px 60px;
+  padding: 50px 20px 44px;
   background-color: #F8F8F8;
 
   &__container {
@@ -44,6 +44,8 @@
 
   &__products {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
   }
 
   &__sort {
@@ -257,7 +259,7 @@
 
 @media (min-width: $tablet-width) {
   .catalog {
-    padding: 60px 30px 80px;
+    padding: 80px 20px 90px;
 
     &__container {
       max-width: 768px;
@@ -285,6 +287,7 @@
 
     &__pagination {
       margin-top: 50px;
+      align-self: flex-end;
 
       &:has(> .catalog__pagination-link--prev + .catalog__pagination-link--current) {
         >.catalog__pagination-link--prev {
@@ -324,7 +327,7 @@
 
 @media (min-width: $desktop-width) {
   .catalog {
-    padding: 60px 40px 100px;
+    padding: 100px 40px 120px;
 
     &__container {
       max-width: 1440px;

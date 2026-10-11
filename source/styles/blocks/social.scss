@@ -1,0 +1,66 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  &__item {
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #bdbdbd;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+
+    &:hover,
+    &:focus-visible {
+      background-color: #f0ebff;
+      color: #7859cf;
+    }
+
+    &:active {
+      background-color: #7859cf40;
+      color: #7859cf;
+    }
+
+    &:focus-visible {
+      outline: 2px solid #7859cf;
+      outline-offset: 2px;
+    }
+  }
+
+  &__icon {
+    display: block;
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background-color: currentColor;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
+
+    &--vk {
+      mask-image: url("../../icons/icon-vk.svg");
+    }
+
+    &--pinterest {
+      mask-image: url("../../icons/icon-pinterest.svg");
+    }
+
+    &--odnoklassniki {
+      mask-image: url("../../icons/icon-odnoklassniki.svg");
+    }
+  }
+}

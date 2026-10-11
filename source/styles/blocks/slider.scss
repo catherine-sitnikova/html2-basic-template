@@ -223,6 +223,10 @@
     background-color: #ffffff;
     cursor: pointer;
 
+    &--active {
+      background-color: #7859CF;
+    }
+
     &:hover,
     &:focus-visible {
       background-color: #7859CF;
@@ -230,14 +234,6 @@
     }
 
     &:active {
-      background-color: #7859CF;
-    }
-
-    &:disabled {
-      background-color: #E2E2E2;
-    }
-
-    &--active {
       background-color: #7859CF;
     }
   }

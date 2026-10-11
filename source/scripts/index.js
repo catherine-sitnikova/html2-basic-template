@@ -1,2 +1,4 @@
-/* в этот файл добавляет скрипты*/
-import './catalog-sort';
+import './catalog-sort.js';
+import initPriceSlider from './catalog-price-slider.js';
+
+initPriceSlider();
